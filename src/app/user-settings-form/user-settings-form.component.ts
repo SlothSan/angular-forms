@@ -23,10 +23,13 @@ export class UserSettingsFormComponent {
   }
 
   onSubmit(form: NgForm) {
-    this.dataService.postUserSettingsForm(this.userSettings).subscribe(
-      result => console.log('Success: ', result.json()),
-      error => console.log('Error: ', error.json())
-    );
+    this.dataService.postUserSettingsForm(this.userSettings)
+      .subscribe(
+        {
+          next: (result: any) => console.log('succes: ', result),
+          error: (error: any) => console.log('error:', error)
+        }
+      );
   }
 
   onBlur(field: NgModel) {

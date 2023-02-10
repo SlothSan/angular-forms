@@ -9,9 +9,8 @@ import {HttpClient} from "@angular/common/http";
 export class DataService {
   constructor(private http: HttpClient) { }
 
-  postUserSettingsForm(userSettings: UserSettings) : Observable<any> {
-    return this.http.post('https://putsreq.com/90MyLavNLUabk03daaNS', userSettings);
-
+  postUserSettingsForm(userSettings: UserSettings | string) : Observable<any> {
+    return this.http.post('https://putsreq.com/4iO7MyOVx1GC4x1o500r', "Hello World");
     // return of(userSettings);
   }
 }
