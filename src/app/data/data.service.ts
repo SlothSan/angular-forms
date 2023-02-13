@@ -13,4 +13,8 @@ export class DataService {
     return this.http.post('https://putsreq.com/4iO7MyOVx1GC4x1o500r', "Hello World");
     // return of(userSettings);
   }
+
+  getSubscriptionTypes() {
+    return of(['Monthly', 'Annual', 'Lifetime'])
+  }
 }
